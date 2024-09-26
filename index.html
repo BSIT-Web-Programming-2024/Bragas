@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venedick Bragas</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #002147; /* Midnight Blue */
+            
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1000;
+            min-height: 20vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+        .tab-label {
+            padding: 10px 20px;
+            color: #FFFFFF; /* White text */
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+            margin: 0 10px;
+        }
+        .tab-label:hover {
+            color: #1E90FF; /* Dodger Blue */
+            text-decoration: underline;
+        }
+
+        /* Two-column Layout */
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+            color: white;
+            min-height: 80vh;
+    
+        }
+        .header-content {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .profile-section {
+            width: 30%;
+            text-align: center;
+        }
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-section h2 {
+            margin: 10px 0;
+            font-size: 1.8em;
+        }
+        .profile-section p {
+            margin: 5px 0;
+        }
+
+        /* Contacts */
+        .contacts {
+            margin-top: 20px;
+        }
+        .contacts a {
+            color: #1E90FF; /* Dodger Blue */
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+        .contacts a:hover {
+            color: #0056A0; /* Royal Blue */
+        }
+
+        .about-section {
+            width: 65%;
+        }
+        .about-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Interests and Education */
+        .details-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .details-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .details-section ul li {
+            margin-bottom: 10px;
+        }
+        .details-section ul li:before {
+            content: '•';
+            color: #1E90FF; /* Dodger Blue */
+            margin-right: 10px;
+        }
+        
+        .tab {
+            display: none;
+            padding: 20px; /* Tab content background */
+            margin: 5px 0;
+            border-radius: 8px;
+            background-color: #00324D; /* Darker blue for tab content */
+        }
+        .tab:target {
+            display: block;
+        }
+
+        main {
+            padding-top: 10px;
+            color: white;
+            min-height: 100vh;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards; /* Animation for smooth appearance */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#home" class="tab-label">About Me</a>
+            <a href="#projects" class="tab-label">Projects</a>
+            <a href="#experience" class="tab-label">Experience</a>
+            <a href="#certificates" class="tab-label">Certificates</a>
+            <a href="#skills" class="tab-label">Skills</a>
+        </div>
+    </nav>
+
+    <div id="home" class="home">
+        <div class="header-content">
+            <!-- Left: Profile Section -->
+            <div class="profile-section">
+                <img src="pngegg (9).png" alt="Venedick Bragas">
+                <h2>Venedick Bragas</h2>
+                <p>IT Student</p>
+                <p>Data Center College of the Philippines</p>
+
+                <!-- Contacts Below Profile Info -->
+                <div class="contacts">
+                    <a href="https://www.facebook.com/brag.as.982/" target="_blank">Facebook</a>
+                    <a href="mailto:bragasvenedick@gmail.com">Email: bragasvenedick@gmail.com</a>
+                    <p>Phone: 09658440773</p>
+                </div>
+            </div>
+
+            <!-- Right: About Section -->
+            <div class="about-section">
+                <h2>About Me</h2>
+                <p>Hello! I'm Venedick Bragas, an IT student. This portfolio showcases my work, hobbies, and interests in technology and design.</p>
+
+                <!-- Interests and Education -->
+                <div class="details-section">
+                    <div>
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Playing Video Games</li>
+                            <li>Watching Anime</li>
+                            <li>Watching Movies</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Education</h3>
+                        <ul>
+                            <li>ICT, Data Center College</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="box">
+        <section id="projects" class="content tab">
+            <h2>Projects</h2>
+            <figure>
+                <img src="BIR.jpg" alt="Project" class="project-img">
+                <figcaption>Project ID</figcaption>
+            </figure>
+        </section>
+
+        <section id="experience" class="content tab">
+            <h2>Experience</h2>
+            <article>
+                <h3>Layout Artist</h3>
+                <p>Kebs Enterprise Printing Services-Baguio | March 2024 to July 2024</p>
+                <ul>
+                    <li>Designed and printed various materials including tarpaulins, ribbons, button pins, lanyards, and stickers.</li>
+                    <li>Collaborated with clients to ensure their design needs were met.</li>
+                    <li>Utilized CorelDraw and Photoshop for creating layouts.</li>
+                    <li>Ensured all print materials met quality standards and were production-ready.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Scanner Operator</h3>
+                <p>Microimaging Sales and Services-Baguio | July 2023 to December 2023</p>
+                <ul>
+                    <li>Assigned document locating numbers to scanned documents.</li>
+                    <li>Operated scanning equipment to digitize documents.</li>
+                    <li>Conducted quality checks on scanned documents.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Service Crew</h3>
+                <p>The Camp-Hardin | March 2023 to April 2023</p>
+                <ul>
+                    <li>Maintained cleanliness and organization of the dining and kitchen areas.</li>
+                    <li>Handled customer orders and transactions.</li>
+                    <li>Cleared tables and assisted with dishwashing.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="certificates" class="content tab">
+            <h2>Certificates</h2>
+            <figure>
+                <img src="certificate.jpg" alt="Certificate" class="certificate-img">
+                <figcaption>Training Certificate</figcaption>
+            </figure>
+        </section>
+
+        <section id="skills" class="content tab">
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Computer Literacy</li>
+                    <li>Graphic Design</li>
+                    <li>Print Production</li>
+                    <li>Document Scanning & Management</li>
+                </ul>
+            </div>            
+    </main>
+
+</body>
+</html>
