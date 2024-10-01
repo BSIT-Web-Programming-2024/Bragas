@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venedick Bragas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            background-color: #002147; 
+            background-color: #00063d; 
             
         }
 
@@ -22,6 +23,7 @@
             z-index: 1000;
             min-height: 20vh;
         }
+    
         .navbar {
             display: flex;
             justify-content: center;
@@ -34,7 +36,7 @@
             margin: 0 10px;
         }
         .tab-label:hover {
-            color: #1E90FF; 
+            color: #ff7b00; 
             text-decoration: underline;
         }
 
@@ -42,9 +44,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 80px;
             color: white;
-            min-height: 80vh;
+            height: 100vh;
             overflow: hidden;
             
         }
@@ -53,7 +54,7 @@
             max-width: 1200px;
             width: 100%;
             align-items: flex-start;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
         .profile-section {
             width: 30%;
@@ -69,6 +70,7 @@
         .profile-section h2 {
             margin: 10px 0;
             font-size: 1.8em;
+            color:#ff7b00;
         }
         .profile-section p {
             margin: 5px 0;
@@ -76,15 +78,29 @@
 
         .contacts {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
         }
         .contacts a {
-            color: #1E90FF; 
+            color: #ff7b00; 
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-decoration: none;
-            display: block;
             margin: 5px 0;
+            border: 2px #ff7b00;
+            border-radius: 50%;
+            background-color: none;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .contacts a:hover {
-            color: #0056A0; 
+            transform: scale(1.1);
+            color: #FFFFFF;
         }
 
         .about-section {
@@ -121,24 +137,27 @@
         .tab {
             display: none;
             padding: 20px; 
-            margin: 5px 0;
-            border-radius: 8px;
-            background-color: #00324D; 
         }
         .tab:target {
-            display: block;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
         }
 
         main {
-            padding-top: 10px;
             color: white;
         }
+
         .content {
-            max-width: 1200px;
-            margin: 20px auto 0;
+            max-width: auto;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 0.5s forwards; 
+            animation: fadeIn 1s forwards; 
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            overflow: hidden;
+            
         }
 
         @keyframes fadeIn {
@@ -147,6 +166,7 @@
                 transform: translateY(0);
             }
         }
+        
     </style>
 </head>
 <body>
@@ -169,9 +189,9 @@
                 <p>Data Center College of the Philippines</p>
 
                 <div class="contacts">
-                    <a href="https://www.facebook.com/brag.as.982/" target="_blank">Facebook</a>
-                    <a href="mailto:bragasvenedick@gmail.com">Email: bragasvenedick@gmail.com</a>
-                    <p>Phone: 09658440773</p>
+                    <a href="https://www.facebook.com/brag.as.982/" class="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="mailto:bragasvenedic@gmail.com" class="email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="tel:+639658440773" class="phone" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
                 </div>
             </div>
 
@@ -199,7 +219,7 @@
         </div>
     </div>
 
-    <main class="box">
+    <main>
         <section id="projects" class="content tab">
             <h2>Projects</h2>
             <figure>
