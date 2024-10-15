@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venedick Bragas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="script.js">
+    
     <style>
         body {
         font-family: 'Roboto', sans-serif;
@@ -452,7 +452,9 @@
             transform: scale(1.05);
         }
 
-
+        .skill{
+            height: 70vh;
+        }
 
     </style>    
 </head>
@@ -565,7 +567,7 @@
                 </div>
             </div>
         </section>
-        <section id="skills" class="tab-content">
+        <section id="skills" class="skill tab-content">
             <div class="skills content">
                 <h2>Skills</h2>
                 <ul>
@@ -577,23 +579,25 @@
                     <li>Document Scanning & Management</li>
                 </ul>
             </div>
+        
+            <section id="contact-me" class="contact-me content">
+                <h2>Contact Me</h2>
+                <form action="/submit" method="POST">
+                    <div class="contact-form">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                        <input type="submit" value="Send Message">
+                    </div>
+                </form>
         </section>
-        <section id="contact-me" class="contact-me content">
-            <h2>Contact Me</h2>
-            <form action="/submit" method="POST">
-                <div class="contact-form">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
-                    <input type="submit" value="Send Message">
-                </div>
-            </form>
         </section>
         <footer>
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </footer>
     </main>
+    <link rel="stylesheet" href="script.js">
 </body>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
