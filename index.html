@@ -30,15 +30,9 @@
             font-size: 2em;
             flex-direction: column;
             margin-left: 75px;
-            width: 1000px;
             animation: fadeIn 2.5s ease forwards;
 
         }
-        
-        .home h1{
-            color: #ff7b00;
-        }
-
         .homenav{
             position: fixed;
             top: 20px;
@@ -161,7 +155,6 @@
         .contacts a:hover {
             border: 2px solid #ffffff;
             background-color: #ffffff;
-            transition: .5s;
         }
 
         .about-section {
@@ -606,4 +599,43 @@
     </main>
     <link rel="stylesheet" href="script.js">
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.tab-content');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    const updateActiveTab = (visibleSectionId) => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === visibleSectionId) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    const checkSectionVisibility = () => {
+        let scrollPosition = window.scrollY + window.innerHeight / 2; 
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                updateActiveTab(section.getAttribute('id'));
+            }
+        });
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            const targetId = link.getAttribute('href').substring(1);
+            updateActiveTab(targetId);
+        });
+    });
+
+    window.addEventListener('scroll', checkSectionVisibility);
+    window.addEventListener('load', checkSectionVisibility);
+});
+
+</script>
+
 </html>
