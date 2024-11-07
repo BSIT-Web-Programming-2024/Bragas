@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venedick Bragas</title>
+    <title>Venedick Bragas - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        scroll-behavior: smooth;
-        background-color: #1b1b1b; 
-        background-image: url('pngegg (14).png');
-        background-size: 100%; 
-        background-position: top; 
-        background-repeat: no-repeat; 
-        background-blend-mode: screen;
-        
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #ffffff; 
+            background-image: url('pngegg (14).png');
+            background-size: 100%; 
+            background-position: top; 
+            background-repeat: no-repeat; 
+            background-blend-mode: screen;
+            
         }
 
         .home{
             height: 100vh;
-            color: white;
+            color: rgb(0, 0, 0);
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -31,6 +31,10 @@
             margin-left: 75px;
             animation: fadeIn 2.5s ease forwards;
 
+        }
+        .home h1{
+            font-size: 3.5em;
+            animation: fadeInText 3s ease forwards;
         }
         .homenav{
             position: fixed;
@@ -53,7 +57,7 @@
 
         .tab-label {
             padding: 10px 20px;
-            color: #FFFFFF;
+            color: #000000;
             text-decoration: none;
             border-radius: 20px;
             transition: background-color 0.3s, color 0.3s, transform 0.3s;
@@ -71,7 +75,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #1b1b1b; 
+            background-color: #ffffff; 
             border: 3px solid #ff7b00;
             border-radius: 50px;
             padding: 10px 20px;
@@ -88,7 +92,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: rgb(0, 0, 0);
             height: 100vh;
             overflow: hidden;
             opacity: 0;
@@ -153,7 +157,7 @@
 
         .contacts a:hover {
             border: 2px solid #ffffff;
-            background-color: #ffffff;
+            background-color: #000000;
             transition: 1.5s;
         }
 
@@ -192,7 +196,7 @@
 
         .certificate-box {
             background-color: #1a1a7d;
-            color: white;
+            color: rgb(0, 0, 0);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -250,8 +254,8 @@
 
         .timeline-content {
             padding: 15px 20px;
-            background-color: #1a1a1a; 
-            color: #ffffff;
+            background-color: #e4dada; 
+            color: #000000;
             border-radius: 10px;
             border-left: 5px solid #ff7b00; 
             transition: transform 0.3s, box-shadow 0.3s;
@@ -288,7 +292,7 @@
 
         .timeline-item:hover .timeline-content {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4); 
+            box-shadow: 0 8px 20px rgba(12, 12, 12, 0.4); 
         }
 
         .contact-form {
@@ -301,7 +305,7 @@
 
         .contact-form label {
             margin-bottom: 5px;
-            color: #ffffff;
+            color: #000000;
         }
 
         .contact-form input[type="text"],
@@ -327,7 +331,7 @@
 
         .contact-form input[type="submit"] {
             background-color: #ff7b00;
-            color: white;
+            color: rgb(0, 0, 0);
             border: none;
             padding: 10px;
             border-radius: 5px;
@@ -359,13 +363,13 @@
 
         .skills{
             text-align: center;
-            color: #ffffff;
+            color: #000000;
             animation: fadeIn 2.5s ease forwards;
             
         }
 
         .skills h2{
-            color: #FFFFFF;
+            color: #000000;
             margin-bottom: 70px;
             font-size: 2.5em;
             font-weight: bold;
@@ -387,12 +391,11 @@
         }
 
         footer{
-            height: 15vh;
+            height: 13vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #1a1a1a;
             margin-top: 50px;
         }
 
@@ -410,7 +413,7 @@
         }
 
         footer a:hover{
-            background-color: #FFFFFF;
+            background-color: #000000;
             transition: .5s;
         }
 
@@ -456,65 +459,246 @@
             height: 70vh;
         }
 
-        /* From Uiverse.io by satyamchaudharydev */ 
-/* The switch - the box around the slider */
-.switch {
-  display: block;
-  --width-of-switch: 3.5em;
-  --height-of-switch: 2em;
-  /* size of sliding icon -- sun and moon */
-  --size-of-icon: 1.4em;
-  /* it is like a inline-padding of switch */
-  --slider-offset: 0.3em;
-  position: relative;
-  width: var(--width-of-switch);
-  height: var(--height-of-switch);
-}
+        .switch {
+        display: block;
+        --width-of-switch: 3.5em;
+        --height-of-switch: 2em;
+        --size-of-icon: 1.4em;
+        --slider-offset: 0.3em;
+        position: relative;
+        width: var(--width-of-switch);
+        height: var(--height-of-switch);
+        }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f4f4f5;
-  transition: .4s;
-  border-radius: 30px;
-}
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f4f4f5;
+        transition: .4s;
+        border-radius: 30px;
+        }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
-  border-radius: 20px;
-  left: var(--slider-offset,0.3em);
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
-  ;
- transition: .4s;
-}
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: var(--size-of-icon,1.4em);
+        width: var(--size-of-icon,1.4em);
+        border-radius: 20px;
+        left: var(--slider-offset,0.3em);
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+        ;
+        transition: .4s;
+        }
 
-input:checked + .slider {
-  background-color: #303136;
-}
+        input:checked + .slider {
+        background-color: #303136;
+        }
 
-input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-  background: #303136;
-  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-}
+        input:checked + .slider:before {
+        left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+        background: #303136;
+        box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+        }
+        .dark-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .dark-mode .home {
+            color: #ffffff;
+        }
+
+        .dark-mode .home-tab {
+            color: #ff7b00;
+        }
+
+        .dark-mode .tab-label {
+            color: #ffffff;
+        }
+
+        .dark-mode .tab-label:hover {
+            background-color: #ff7b00;
+            color: #ffffff;
+        }
+
+        .dark-mode .navbar {
+            background-color: #000000;
+            border: 3px solid #ff7b00;
+        }
+
+        .dark-mode .about {
+            color: #ffffff;
+        }
+
+        .dark-mode .profile-section img {
+            border: 2px solid #ff7b00;
+        }
+
+        .dark-mode .profile-section img:hover {
+            box-shadow: 0 0 8px #ff7b00;
+        }
+
+        .dark-mode .contacts a {
+            color: #ff7b00;
+            border: 2px solid #ff7b00;
+        }
+
+        .dark-mode .contacts a:hover {
+            border: 2px solid #ffffff;
+            background-color: #ffffff;
+        }
+
+        .dark-mode .about-section {
+            color: #ffffff;
+        }
+
+        .dark-mode .details-section ul li:before {
+            color: #ff7b00;
+        }
+
+        .dark-mode .certificate-box {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .dark-mode .certificate-box:hover {
+            transform: scale(1.05);
+        }
+
+        .dark-mode .timeline {
+            border-left: 3px solid #ff7b00;
+        }
+
+        .dark-mode .timeline-icon {
+            background-color: #ffcc00;
+            box-shadow: 0 0 0 4px #ff7b00;
+        }
+
+        .dark-mode .timeline-content {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-left: 5px solid #ff7b00;
+        }
+
+        .dark-mode .timeline-content h3 {
+            color: #ff7b00;
+        }
+
+        .dark-mode .timeline-content ul li:before {
+            color: #ff7b00;
+        }
+
+        .dark-mode .contact-form {
+            color: #ffffff;
+        }
+
+        .dark-mode .contact-form label {
+            color: #ffffff;
+        }
+
+        .dark-mode .contact-form input[type="text"],
+        .dark-mode .contact-form textarea {
+            border: 2px solid #ff7b00;
+        }
+
+        .dark-mode .contact-form input[type="text"]:focus,
+        .dark-mode .contact-form textarea:focus {
+            border-color: #1E90FF;
+        }
+
+        .dark-mode .contact-form input[type="submit"] {
+            background-color: #ff7b00;
+            color: #ffffff;
+        }
+
+        .dark-mode .contact-form input[type="submit"]:hover {
+            background-color: #1E90FF;
+        }
+
+        .dark-mode .skills {
+            color: #ffffff;
+        }
+
+        .dark-mode .skills ul {
+            color: #ffffff;
+        }
+
+        .dark-mode .skills li {
+            background-color: #ff7b00;
+        }
+
+        .dark-mode footer {
+            color: #ffffff;
+        }
+
+        .dark-mode footer a {
+            color: #ff7b00;
+            border: 3px solid #ff7b00;
+        }
+
+        .dark-mode footer a:hover {
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .homenav {
+                position: relative;
+                justify-content: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .home-tab, .tab-label {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .homenav {
+                position: relative;
+                justify-content: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .home-tab, .tab-label {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .homenav {
+                position: relative;
+                justify-content: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .home-tab, .tab-label {
+                font-size: 0.8em;
+            }
+        }
     </style>    
 </head>
 <body>
@@ -585,7 +769,7 @@ input:checked + .slider:before {
             </div>
         </div>
     </div>
-
+<script src=""></script>
     <main>
         <section id="experience" class="experience tab-content">
             <h2 class="experience-header">Experience</h2>
@@ -661,45 +845,215 @@ input:checked + .slider:before {
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </footer>
     </main>
-    <link rel="stylesheet" href="script.js">
+   
 </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.tab-content');
-    const navLinks = document.querySelectorAll('.navbar a');
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    const body = document.body;
 
-    const updateActiveTab = (visibleSectionId) => {
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === visibleSectionId) {
-                link.classList.add('active');
-            }
-        });
-    };
-
-    const checkSectionVisibility = () => {
-        let scrollPosition = window.scrollY + window.innerHeight / 2; 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                updateActiveTab(section.getAttribute('id'));
-            }
-        });
-    };
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            const targetId = link.getAttribute('href').substring(1);
-            updateActiveTab(targetId);
-        });
+    checkbox.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
     });
 
-    window.addEventListener('scroll', checkSectionVisibility);
-    window.addEventListener('load', checkSectionVisibility);
-});
+    const tabs = document.querySelectorAll('.tab-label');
+    const sections = document.querySelectorAll('.tab-content');
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('.tab-content');
+        const navLinks = document.querySelectorAll('.navbar a');
 
+        const updateActiveTab = (visibleSectionId) => {
+            if (navLinks === null || navLinks.length === 0) {
+                return;
+            }
+            navLinks.forEach(link => {
+                if (link === null) {
+                    return;
+                }
+                link.classList.remove('active');
+                if (link.getAttribute('href') === null) {
+                    return;
+                }
+                if (link.getAttribute('href').substring(1) === visibleSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+
+        const checkSectionVisibility = () => {
+            if (sections === null || sections.length === 0) {
+                return;
+            }
+            let scrollPosition = window.scrollY + window.innerHeight / 2;
+            sections.forEach(section => {
+                if (section === null) {
+                    return;
+                }
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    const sectionId = section.getAttribute('id');
+                    if (sectionId === null) {
+                        return;
+                    }
+                    updateActiveTab(sectionId);
+                }
+            });
+        };
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                const targetId = link.getAttribute('href').substring(1);
+                updateActiveTab(targetId);
+            });
+        });
+
+        window.addEventListener('scroll', checkSectionVisibility);
+        window.addEventListener('load', checkSectionVisibility);
+        
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        const fadeInTimeline = () => {
+            if (!timelineItems || timelineItems.length === 0) return;
+            
+            timelineItems.forEach((item, index) => {
+                if (!item) return;
+                
+                const rect = item.getBoundingClientRect();
+                
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    if (!item.classList.contains('animated')) {
+                        try {
+                            anime({
+                                targets: item,
+                                opacity: [0, 1],
+                                translateX: index % 2 === 0 ? [-50, 0] : [50, 0],
+                                easing: 'easeOutExpo',
+                                duration: 1500,
+                                delay: index * 200
+                            });
+                            item.classList.add('animated');
+                        } catch (error) {
+                            console.error("Animation error:", error);
+                        }
+                    }
+                } else {
+                    item.classList.remove('animated');
+                    item.style.opacity = 0;
+                    item.style.transform = "translateX(0)";
+                }
+            });
+        };
+
+        window.addEventListener('scroll', fadeInTimeline);
+        window.addEventListener('load', fadeInTimeline);
+        
+        
+const allTexts = document.querySelectorAll('p, h1:not(.tab-content h1), h2:not(.tab-content h2), h3:not(.tab-content h3), h4:not(.tab-content h4), h5:not(.tab-content h5), h6:not(.tab-content h6), a:not(.timeline-content a, .timeline-item h2, .timeline-item h3, .tab-content a, .skills h2, .skills h3, .skills h4, .skills h5, .skills h6, footer p, footer a)');
+const fadeInText = () => {
+    if (!allTexts || allTexts.length === 0) return;
+    
+    allTexts.forEach((text, index) => {
+        if (!text) return;
+        
+        const rect = text.getBoundingClientRect();
+        
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            if (!text.classList.contains('animated')) {
+                try {
+                    anime({
+                        targets: text,
+                        opacity: [0, 1],
+                        translateX: [10, 0],
+                        easing: 'easeOutExpo',
+                        duration: 500,
+                        delay: index * 100
+                    });
+                    text.classList.add('animated');
+                } catch (error) {
+                    console.error("Animation error:", error);
+                }
+            }
+        } else {
+            text.classList.remove('animated');
+            text.style.opacity = 0;
+            text.style.transform = "translateX(10px)";
+        }
+    });
+};
+        
+window.addEventListener('scroll', fadeInText);
+window.addEventListener('load', fadeInText);
+        const skillsList = document.querySelectorAll('.skills ul li');
+        const fadeInSkills = () => {
+            if (!skillsList || skillsList.length === 0) return;
+            
+            skillsList.forEach((item, index) => {
+                if (!item) return;
+                
+                const rect = item.getBoundingClientRect();
+                
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    if (!item.classList.contains('animated')) {
+                        try {
+                            anime({
+                                targets: item,
+                                opacity: [0, 1],
+                                translateX: [10, 0],
+                                easing: 'easeOutExpo',
+                                duration: 500,
+                                delay: index * 100
+                            });
+                            item.classList.add('animated');
+                        } catch (error) {
+                            console.error("Animation error:", error);
+                        }
+                    }
+                } else {
+                    item.classList.remove('animated');
+                    item.style.opacity = 0;
+                    item.style.transform = "translateX(10px)";
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', fadeInSkills);
+        window.addEventListener('load', fadeInSkills);
+    });
+
+    const contactTab = document.querySelector('#contact');
+    const fadeInContact = () => {
+        if (!contactTab) return;
+        
+        const rect = contactTab.getBoundingClientRect();
+        
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            if (!contactTab.classList.contains('animated')) {
+                try {
+                    anime({
+                        targets: contactTab,
+                        opacity: [0, 1],
+                        translateY: [50, 0],
+                        easing: 'easeOutExpo',
+                        duration: 1500
+                    });
+                    contactTab.classList.add('animated');
+                } catch (error) {
+                    console.error("Animation error:", error);
+                }
+            }
+        } else {
+            contactTab.classList.remove('animated');
+            contactTab.style.opacity = 0;
+            contactTab.style.transform = "translateY(50px)";
+        }
+    };
+    
+    window.addEventListener('scroll', fadeInContact);
+    window.addEventListener('load', fadeInContact);        
 </script>
 
-</html>
