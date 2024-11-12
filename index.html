@@ -6,7 +6,7 @@
     <title>Venedick Bragas - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
+               body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
@@ -301,6 +301,7 @@
             width: 700px;
             margin: 0 auto;
             animation: fadeIn 2.5s ease forwards;
+            margin-bottom: 50px;
         }
 
         .contact-form label {
@@ -359,6 +360,7 @@
             font-size: 2.5em;
             font-weight: bold;
             margin: 0;
+            
         }
 
         .skills{
@@ -388,33 +390,6 @@
             margin: 10px;
             background-color: #ff7b00;
             border-radius: 2px;
-        }
-
-        footer{
-            height: 13vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        footer a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color:#ff7b00;
-            font-size: 2em;
-            border-radius: 50%;
-            border: 3px solid #ff7b00;
-            width: 50px;
-            height: 50px;
-            text-decoration: none;
-        }
-
-        footer a:hover{
-            background-color: #000000;
-            transition: .5s;
         }
 
         @keyframes fadeIn {
@@ -639,19 +614,6 @@
             background-color: #ff7b00;
         }
 
-        .dark-mode footer {
-            color: #ffffff;
-        }
-
-        .dark-mode footer a {
-            color: #ff7b00;
-            border: 3px solid #ff7b00;
-        }
-
-        .dark-mode footer a:hover {
-            background-color: #ffffff;
-        }
-
         @media (max-width: 768px) {
             .homenav {
                 position: relative;
@@ -699,7 +661,63 @@
                 font-size: 0.8em;
             }
         }
-    </style>    
+     
+        .flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  display: inline-block;
+  margin: 10px;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #ff7b00;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, #ffcc00 60%, #ff7b00 88%, #ffb300 40%, rgba(255, 123, 0, 0.603) 48%);
+  color: #ffffff;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, #ffb300 30%, #ff7b00 88%, #ffcc00 40%, #ffb300 78%);
+  color: white;
+  transform: rotateY(180deg);
+    </style>
+
 </head>
 <body>
     <nav>
@@ -717,10 +735,10 @@
         </div>
 
     </nav>
-    
+
     <div id="home" class="home tab-content">
         <h1>Welcome</h1>
-        <p>Hello! I'm Venedick Bragas, and this is my portfolio. I am currently an IT student at Data Center College of the Philippines. This portfolio presents a selection of my work and projects, offering a glimpse into my skills.</p>          
+        <p>Hello! I'm Venedick Bragas, and this is my portfolio. I am currently an IT student at Data Center College of the Philippines. This portfolio presents a selection of my work and projects, offering a glimpse into my skills.</p>            
     </div>
 
     <div id="about" class="about tab-content">
@@ -733,7 +751,7 @@
                 <div class="contacts">
                     <a href="https://www.facebook.com/brag.as.982/" class="facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="mailto:bragasvenedic@gmail.com" class="email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-                    <a href="tel:+639658440773" class="phone" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://github.com/BRAGAS002" class="github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
 
@@ -816,17 +834,52 @@
             </div>
         </section>
         <section id="skills" class="skill tab-content">
-            <div class="skills content">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Computer Literacy</li>
-                    <li>Graphic Design</li>
-                    <li>Photoshop</li>
-                    <li>CorelDraw</li>
-                    <li>Print Production</li>
-                    <li>Document Scanning & Management</li>
-                </ul>
+    <div class="skills content">
+        <h2>Skills</h2>
+        <ul>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">Computer Literacy</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Proficient in using various software and operating systems.</p>
+                    </div>
+                </div>
             </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">Graphic Design</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Skilled in creating visual content with Adobe Suite.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">Print Production</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Experienced in preparing files for high-quality printing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p class="title">Document Scanning & Management</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">Efficient in handling, scanning, and organizing documents.</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</section>
         
             <section id="contact-me" class="contact-me content">
                 <h2>Contact Me</h2>
@@ -841,9 +894,6 @@
                 </form>
         </section>
         </section>
-        <footer>
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-        </footer>
     </main>
    
 </body>
@@ -953,11 +1003,11 @@
         window.addEventListener('load', fadeInTimeline);
         
         
-const allTexts = document.querySelectorAll('p, h1:not(.tab-content h1), h2:not(.tab-content h2), h3:not(.tab-content h3), h4:not(.tab-content h4), h5:not(.tab-content h5), h6:not(.tab-content h6), a:not(.timeline-content a, .timeline-item h2, .timeline-item h3, .tab-content a, .skills h2, .skills h3, .skills h4, .skills h5, .skills h6, footer p, footer a)');
+const aboutMeTexts = document.querySelectorAll('#about p, #about h2, #about h3, #about ul li');
 const fadeInText = () => {
-    if (!allTexts || allTexts.length === 0) return;
+    if (!aboutMeTexts || aboutMeTexts.length === 0) return;
     
-    allTexts.forEach((text, index) => {
+    aboutMeTexts.forEach((text, index) => {
         if (!text) return;
         
         const rect = text.getBoundingClientRect();
@@ -987,17 +1037,20 @@ const fadeInText = () => {
 };
         
 window.addEventListener('scroll', fadeInText);
+
 window.addEventListener('load', fadeInText);
-        const skillsList = document.querySelectorAll('.skills ul li');
+
+        const skillsTab = document.querySelector('#skills');
         const fadeInSkills = () => {
-            if (!skillsList || skillsList.length === 0) return;
+            if (!skillsTab) return;
             
-            skillsList.forEach((item, index) => {
-                if (!item) return;
-                
-                const rect = item.getBoundingClientRect();
-                
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            const rect = skillsTab.getBoundingClientRect();
+            
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                const skillsList = skillsTab.querySelectorAll('ul li');
+                skillsList.forEach((item, index) => {
+                    if (!item) return;
+                    
                     if (!item.classList.contains('animated')) {
                         try {
                             anime({
@@ -1013,18 +1066,20 @@ window.addEventListener('load', fadeInText);
                             console.error("Animation error:", error);
                         }
                     }
-                } else {
+                });
+            } else {
+                const skillsList = skillsTab.querySelectorAll('li:animated');
+                skillsList.forEach(item => {
                     item.classList.remove('animated');
                     item.style.opacity = 0;
                     item.style.transform = "translateX(10px)";
-                }
-            });
+                });
+            }
         };
         
         window.addEventListener('scroll', fadeInSkills);
         window.addEventListener('load', fadeInSkills);
     });
-
     const contactTab = document.querySelector('#contact');
     const fadeInContact = () => {
         if (!contactTab) return;
@@ -1054,6 +1109,19 @@ window.addEventListener('load', fadeInText);
     };
     
     window.addEventListener('scroll', fadeInContact);
-    window.addEventListener('load', fadeInContact);        
-</script>
+    window.addEventListener('load', fadeInContact);  
 
+    document.querySelectorAll('.tab-label').forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const element = document.querySelector(href);
+            const scrollOptions = {
+                top: element.offsetTop - 50,
+                behavior: 'smooth'
+            };
+            window.scrollTo(scrollOptions);
+        });
+    });
+    
+    </script>
