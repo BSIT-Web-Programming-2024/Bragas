@@ -292,6 +292,7 @@
             flex-direction: column;
             width: 700px;
             margin: 0 auto;
+            margin-bottom: 50px;
             animation: fadeIn 2.5s ease forwards;
         }
 
