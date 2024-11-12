@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    
+
     <main>
         <section id="experience" class="experience tab-content">
             <h2 class="experience-header">Experience</h2>
@@ -328,88 +328,82 @@ window.addEventListener('scroll', fadeInText);
 
 window.addEventListener('load', fadeInText);
 
-        const skillsTab = document.querySelector('#skills');
-        const fadeInSkills = () => {
-            if (!skillsTab) return;
-            
-            const rect = skillsTab.getBoundingClientRect();
-            
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                const skillsList = skillsTab.querySelectorAll('ul li');
-                skillsList.forEach((item, index) => {
-                    if (!item) return;
-                    
-                    if (!item.classList.contains('animated')) {
-                        try {
-                            anime({
-                                targets: item,
-                                opacity: [0, 1],
-                                translateX: [10, 0],
-                                easing: 'easeOutExpo',
-                                duration: 500,
-                                delay: index * 100
-                            });
-                            item.classList.add('animated');
-                        } catch (error) {
-                            console.error("Animation error:", error);
-                        }
-                    }
-                });
-            } else {
-                const skillsList = skillsTab.querySelectorAll('li:animated');
-                skillsList.forEach(item => {
-                    item.classList.remove('animated');
-                    item.style.opacity = 0;
-                    item.style.transform = "translateX(10px)";
-                });
-            }
-        };
-        
-        window.addEventListener('scroll', fadeInSkills);
-        window.addEventListener('load', fadeInSkills);
     });
-    const contactTab = document.querySelector('#contact');
-    const fadeInContact = () => {
-        if (!contactTab) return;
-        
-        const rect = contactTab.getBoundingClientRect();
-        
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            if (!contactTab.classList.contains('animated')) {
+  const contactTab = document.querySelector('#contact-me');
+const fadeInContact = () => {
+    if (!contactTab) return;
+    
+    const rect = contactTab.getBoundingClientRect();
+    
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        const contactContents = contactTab.querySelectorAll('h2, label, input, textarea, input[type="submit"]');
+        contactContents.forEach((item, index) => {
+            if (!item) return;
+            
+            if (!item.classList.contains('animated')) {
                 try {
                     anime({
-                        targets: contactTab,
+                        targets: item,
                         opacity: [0, 1],
-                        translateY: [50, 0],
+                        translateX: [10, 0],
                         easing: 'easeOutExpo',
-                        duration: 1500
+                        duration: 500,
+                        delay: index * 100
                     });
-                    contactTab.classList.add('animated');
+                    item.classList.add('animated');
                 } catch (error) {
                     console.error("Animation error:", error);
                 }
             }
-        } else {
-            contactTab.classList.remove('animated');
-            contactTab.style.opacity = 0;
-            contactTab.style.transform = "translateY(50px)";
-        }
-    };
-    
-    window.addEventListener('scroll', fadeInContact);
-    window.addEventListener('load', fadeInContact);  
-
-    document.querySelectorAll('.tab-label').forEach(tab => {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            const element = document.querySelector(href);
-            const scrollOptions = {
-                top: element.offsetTop - 50,
-                behavior: 'smooth'
-            };
-            window.scrollTo(scrollOptions);
         });
-    });
+    } else {
+        const contactContents = contactTab.querySelectorAll('.animated');
+        contactContents.forEach(item => {
+            item.classList.remove('animated');
+            item.style.opacity = 0;
+            item.style.transform = "translateX(10px)";
+        });
+    }
+};
+    
+window.addEventListener('scroll', fadeInContact);
+window.addEventListener('load', fadeInContact);
+
+    const skillsTab = document.querySelector('#skills');
+const fadeInSkills = () => {
+    if (!skillsTab) return;
+    
+    const rect = skillsTab.getBoundingClientRect();
+    
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        const skillsContents = skillsTab.querySelectorAll('h2, .flip-card');
+        skillsContents.forEach((item, index) => {
+            if (!item) return;
+            
+            if (!item.classList.contains('animated')) {
+                try {
+                    anime({
+                        targets: item,
+                        opacity: [0, 1],
+                        translateX: [10, 0],
+                        easing: 'easeOutExpo',
+                        duration: 500,
+                        delay: index * 100
+                    });
+                    item.classList.add('animated');
+                } catch (error) {
+                    console.error("Animation error:", error);
+                }
+            }
+        });
+    } else {
+        const skillsContents = skillsTab.querySelectorAll('.animated');
+        skillsContents.forEach(item => {
+            item.classList.remove('animated');
+            item.style.opacity = 0;
+            item.style.transform = "translateX(10px)";
+        });
+    }
+};
     
 </script>
